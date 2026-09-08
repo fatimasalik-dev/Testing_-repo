@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduBridge, Peer tutoring, run by students, priced for students</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========== HERO (photo background + floating nav) =========== -->
+    <div class="hero-wrap">
+
+        <header class="site-header">
+
+            <a class="wordmark" href="#">
+                <span class="mark">EB</span>
+                EduBridge
+            </a>
+
+            <nav class="main-nav">
+                <a href="pages/courses.html">Courses</a>
+                <a href="#categories">All Categories</a>
+                <a href="#tutors">Find a Tutor</a>
+                <a href="#how">How It Works</a>
+                <a href="#teach">Become a Tutor</a>
+            </nav>
+
+            <a class="btn btn-accent" href="pages/signup.html">Create Account</a>
+
+        </header>
+
+        <section class="hero">
+            <div class="hero-inner">
+
+                <p class="hero-eyebrow">A social business run by AIU students</p>
+
+                <h1>
+                    Every Skill You Need.
+                    Tought by the Student Next to You.
+                </h1>
+
+                <p class="hero-lead">
+                    One-to-one tutoring with students from your own campus.
+                    Online or face to face, at a price built for student budgets.
+                </p>
+
+                <!-- Skill search = Feature 4 (search &amp; filter) -->
+                <div class="search-bar">
+                    <label class="visually-hidden" for="skill">Skill or subject</label>
+                    <input id="skill" type="text" placeholder="What do you want to learn?">
+
+                    <label class="visually-hidden" for="category">Category</label>
+                    <select id="category">
+                        <option>All categories</option>
+                        <option>Computer Science</option>
+                        <option>Social Media</option>
+                        <option>Business (BBA)</option>
+                        <option>Design &amp; Creative</option>
+                        <option>Languages &amp; Communication</option>
+                        <option>Data &amp; Productivity</option>
+                        <option>Academic &amp; Research</option>
+                        <option>Career &amp; Professional Development</option>
+                        <option>Freelancing &amp; Online Work</option>
+                        <option>Personal Development</option>
+                        <option>Finance &amp; Life Skills</option>
+                        <option>Emerging Technology</option>
+                    </select>
+
+                    <button class="btn btn-accent" type="button">Find a Tutor</button>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+                <div class="student-photo"></div>
+            </div>
+
+        </section>
+
+        <!-- white bar under the photo, like the reference layout -->
+        <p class="hero-strip">
+            EduBridge connects AIU students who need help with AIU students who
+            can teach it, so tutoring stays affordable and tutors get paid.
+        </p>
+
+    </div>
+
+
+    <main>
+
+        <!-- =========== STATS BAND =========== -->
+        <!-- REPLACE every number with your own survey / pilot data.
+             Cite the source in APA on the poster. -->
+        <section class="stats">
+            <div><strong>15</strong><span>Student Tutors</span></div>
+            <div><strong>50</strong><span>Learners Enrolled</span></div>
+            <div><strong>70%</strong><span>Of Each Fee to the Tutor</span></div>
+            <div><strong>12</strong><span>Learning Categories</span></div>
+        </section>
+
+
+        <!-- =========== THE THREE ZEROES =========== -->
+        <section class="zeroes">
+
+            <div class="section-head centered">
+                <p class="eyebrow">Our Measure of Success</p>
+                <h2>Three Zeroes, Not Three Profits</h2>
+                <p class="section-sub">
+                    EduBridge is a social business. Every decision is tested
+                    against the same three goals.
+                </p>
+            </div>
+
+            <div class="zero-grid">
+
+                <article class="zero-card">
+                    <span class="zero-mark"><img src="images/zero-poverty-photo.jpeg" alt="Zero Poverty"></span>
+                    <h3>Zero Poverty</h3>
+                    <p>
+                        Sessions cost a fraction of commercial tutoring, so
+                        money is never the reason a student falls behind.
+                    </p>
+                </article>
+
+                <article class="zero-card">
+                    <span class="zero-mark"><img src="images/zero-unemployment-photo.jpeg" alt="Zero Unemployment"></span>
+                    <h3>Zero Unemployment</h3>
+                    <p>
+                        Every tutor is an AIU student earning from their own
+                        academic strength, on their own timetable.
+                    </p>
+                </article>
+
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========== FLAGSHIP COURSE TRACKS =========== -->
+        <section class="courses" id="courses">
+
+            <div class="section-head centered">
+                <p class="eyebrow">Flagship Course Tracks</p>
+                <h2>Start With What Your Degree Needs</h2>
+                <p class="section-sub">
+                    These three tracks map straight onto AIU's most-taken
+                    programmes. Every skill inside them runs beginner →
+                    intermediate → advanced → professional.
+                </p>
+            </div>
+
+            <div class="course-grid">
+
+                <article class="course-card">
+                    <div class="course-top">Track 01</div>
+                    <div class="course-body">
+                        <h3>Computer Science</h3>
+                        <p>
+                            Programming fundamentals, web development,
+                            databases and data handling.
+                        </p>
+                        <ul class="course-tags">
+                            <li>Programming</li>
+                            <li>Web Development</li>
+                            <li>Data Science</li>
+                            <li>AI &amp; ML</li>
+                            <li>Cybersecurity</li>
+                            <li>Databases</li>
+                        </ul>
+                        <dl class="card-meta">
+                            <div><dt>Tutors</dt><dd> 10 available</dd></div>
+                            <div><dt>From</dt><dd>RM 20 / 300 month</dd></div>
+                        </dl>
+                        <a class="btn btn-outline" href="pages/course-details.html">
+    View Course
+</a>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-top alt">Track 02</div>
+                    <div class="course-body">
+                        <h3>Social Media</h3>
+                        <p>
+                            Digital marketing, content creation and managing
+                            pages for a real audience.
+                        </p>
+                        <ul class="course-tags">
+                            <li>Content Creation</li>
+                            <li>Graphic Design</li>
+                            <li>Video Editing</li>
+                            <li>Digital Marketing</li>
+                            <li>SEO</li>
+                        </ul>
+                        <dl class="card-meta">
+                            <div><dt>Tutors</dt><dd> 12 available</dd></div>
+                            <div><dt>From</dt><dd>RM 10 / 250 month</dd></div>
+                        </dl>
+                        <a class="btn btn-outline" href="#">View Course</a>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-top alt2">Track 03</div>
+                    <div class="course-body">
+                        <h3>Business (BBA)</h3>
+                        <p>
+                            Management, marketing, finance basics and
+                            entrepreneurship.
+                        </p>
+                        <ul class="course-tags">
+                            <li>Management</li>
+                            <li>Marketing</li>
+                            <li>Finance</li>
+                            <li>Entrepreneurship</li>
+                            <li>HR</li>
+                        </ul>
+                        <dl class="card-meta">
+                            <div><dt>Tutors</dt><dd> 13 available</dd></div>
+                            <div><dt>From</dt><dd>RM 10 /200 month</dd></div>
+                        </dl>
+                        <a class="btn btn-outline" href="#">View Course</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========== ALL LEARNING CATEGORIES (the other 9) =========== -->
+        <section class="categories" id="categories">
+
+            <div class="section-head centered">
+                <p class="eyebrow">Beyond Your Major</p>
+                <h2>Every Other Skill AIU Students Ask For</h2>
+                <p class="section-sub">
+                    Computer Science, Social Media and Business are the three
+                    flagship tracks above. These nine cover everything else
+                    students search for — from design to freelancing to
+                    everyday money skills.
+                </p>
+            </div>
+
+            <div class="category-grid">
+
+                <article class="category-card">
+                    <span class="cat-num">04</span>
+                    <h3>Design &amp; Creative</h3>
+                    <p>Turn an idea into something people actually stop and look at.</p>
+                    <ul class="cat-tags">
+                        <li>Canva</li>
+                        <li>Photoshop</li>
+                        <li>UI/UX</li>
+                        <li>Video Editing</li>
+                        <li>Branding</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#">View Category</a>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">05</span>
+                    <h3>Languages &amp; Communication</h3>
+                    <p>Academic English, IELTS/TOEFL prep and speaking with confidence.</p>
+                    <ul class="cat-tags">
+                        <li>Academic English</li>
+                        <li>IELTS</li>
+                        <li>TOEFL</li>
+                        <li>Public Speaking</li>
+                        <li>Presentation Skills</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#">View Category</a>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">06</span>
+                    <h3>Data &amp; Productivity</h3>
+                    <p>The Excel, Sheets and Office skills every assignment ends up needing.</p>
+                    <ul class="cat-tags">
+                        <li>Excel</li>
+                        <li>Power BI</li>
+                        <li>Google Workspace</li>
+                        <li>Notion</li>
+                        <li>Project Management</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#">View Category</a>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">07</span>
+                    <h3>Academic &amp; Research</h3>
+                    <p>From finding a source to defending it, with proper referencing.</p>
+                    <ul class="cat-tags">
+                        <li>Research Methods</li>
+                        <li>Academic Writing</li>
+                        <li>Critical Thinking</li>
+                        <li>Referencing</li>
+                        <li>Data Analysis</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#">View Category</a>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">08</span>
+                    <h3>Career &amp; Professional Development</h3>
+                    <p>CVs, LinkedIn and interviews that actually get you the callback.</p>
+                    <ul class="cat-tags">
+                        <li>CV Writing</li>
+                        <li>LinkedIn</li>
+                        <li>Interview Prep</li>
+                        <li>Networking</li>
+                        <li>Portfolio Building</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#">View Category</a>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">09</span>
+                    <h3>Freelancing &amp; Online Work</h3>
+                    <p>Earn while you study — proposals, pricing and client work.</p>
+                    <ul class="cat-tags">
+                        <li>Freelance Basics</li>
+                        <li>Client Communication</li>
+                        <li>Pricing Services</li>
+                        <li>Online Tutoring</li>
+                        <li>Remote Work</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#">View Category</a>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">10</span>
+                    <h3>Personal Development</h3>
+                    <p>The soft skills that show up in every group project you'll ever do.</p>
+                    <ul class="cat-tags">
+                        <li>Time Management</li>
+                        <li>Leadership</li>
+                        <li>Teamwork</li>
+                        <li>Communication</li>
+                        <li>Productivity</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#">View Category</a>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">11</span>
+                    <h3>Finance &amp; Life Skills</h3>
+                    <p>Budgeting, banking and staying scam-aware on a student income.</p>
+                    <ul class="cat-tags">
+                        <li>Budgeting</li>
+                        <li>Banking</li>
+                        <li>Saving</li>
+                        <li>Investing Basics</li>
+                        <li>Online Safety</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#">View Category</a>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">12</span>
+                    <h3>Emerging Technology</h3>
+                    <p>For students who want to be ahead of the curve, not behind it.</p>
+                    <ul class="cat-tags">
+                        <li>Generative AI</li>
+                        <li>AI Agents</li>
+                        <li>Robotics</li>
+                        <li>Blockchain</li>
+                        <li>VR/AR</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#">View Category</a>
+                </article>
+
+            </div>
+
+            <p class="categories-note">
+                Every category follows the same path: Beginner → Intermediate →
+                Advanced → Professional. Search above to jump straight to a skill.
+            </p>
+
+        </section>
+
+
+        <!-- =========== HOW IT WORKS =========== -->
+        <section class="how" id="how">
+
+            <div class="section-head centered">
+                <p class="eyebrow">How It Works</p>
+                <h2>One Platform, Two Ways In</h2>
+            </div>
+
+            <div class="track-grid">
+
+                <div class="track">
+                    <h3 class="track-title">If You Want to Learn</h3>
+                    <ol class="steps">
+                        <li><span class="step-num">01</span>
+                            <p>Create your account and choose <em>courses and tutors</em>.</p></li>
+                        <li><span class="step-num">02</span>
+                            <p>Search a skill, compare tutor profiles and ratings.</p></li>
+                        <li><span class="step-num">03</span>
+                            <p>Book a date and time. Confirmation arrives by email.</p></li>
+                        <li><span class="step-num">04</span>
+                            <p>Meet online or on campus, then rate your session.</p></li>
+                    </ol>
+                </div>
+
+                <div class="track">
+                    <h3 class="track-title">If You Want to Teach</h3>
+                    <ol class="steps">
+                        <li><span class="step-num">01</span>
+                            <p>Apply as a <em>skill provider</em> with your results.</p></li>
+                        <li><span class="step-num">02</span>
+                            <p>Build a profile: skills, description, availability.</p></li>
+                        <li><span class="step-num">03</span>
+                            <p>Accept bookings that fit around your own classes.</p></li>
+                        <li><span class="step-num">04</span>
+                            <p>Get paid monthly percentage based on the number of students you recruit.</p></li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <p class="how-note">
+                One account can be both — many of our tutors are still
+                learners in another subject.
+            </p>
+
+        </section>
+
+
+        <!-- =========== TUTORS =========== -->
+        <section class="tutors" id="tutors">
+
+            <div class="section-head centered">
+                <p class="eyebrow">Meet the Tutors</p>
+                <h2>Every Tutor Studies Here</h2>
+            </div>
+
+            <!-- REPLACE with real tutors from your pilot, with their permission. -->
+            <div class="tutor-grid">
+
+                <article class="tutor-card">
+                    <div class="avatar"><img src="images/Alina-photo.jpeg" alt="Alina Ahmadi"></div>
+                    <h3>Alina Ahmadi</h3>
+                    <p class="tutor-degree">Computer Science · Year 2</p>
+                    <ul class="tags"><li>Python</li><li>Databases</li></ul>
+                    <p class="tutor-foot">
+                        <span class="rating">★ 4.9</span>
+                        <span>Online &amp; on campus</span>
+                    </p>
+                    <a class="btn btn-outline" href="pages/tutor-alina.html">View Profile</a>
+                </article>
+
+                <article class="tutor-card">
+                    <div class="avatar"><img src="images/Fatima-photo.jpeg" alt="Fatima Salik"></div>
+                    <h3>Fatima Salik</h3>
+                    <p class="tutor-degree">Computer Science · Year 3</p>
+                    <ul class="tags"><li>Python</li><li>Web Development</li></ul>
+                    <p class="tutor-foot">
+                        <span class="rating">★ 4.6</span>
+                        <span>Online only</span>
+                    </p>
+                    <a class="btn btn-outline" href="pages/tutor-fatima.html">View Profile</a>
+                </article>
+
+                <article class="tutor-card">
+                    <div class="avatar"><img src="images/Alpha-photo.jpeg" alt="Mo Alpha"></div>
+                    <h3>Mo Alpha</h3>
+                    <p class="tutor-degree">Data Science · Year 3</p>
+                    <ul class="tags"><li>Data Visualization</li><li>SQL</li></ul>
+                    <p class="tutor-foot">
+                        <span class="rating">★ 4.5</span>
+                        <span>Online &amp; on campus</span>
+                    </p>
+                    <a class="btn btn-outline" href="pages/tutor-alpha.html">View Profile</a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========== BECOME A TUTOR =========== -->
+        <section class="teach" id="teach">
+
+            <div class="teach-text">
+                <p class="eyebrow light">Become a Tutor</p>
+                <h2>Turn One Good Grade Into a Monthly Income</h2>
+                <p>
+                    Tutoring here is paid work, not volunteering. You set your
+                    availability, and your share of every fee is published
+                    openly before you apply.
+                </p>
+                <a class="btn btn-accent" href="pages/become-tutor.html">Apply to Teach</a>
+            </div>
+
+            <div class="criteria">
+                <h3>Who Can Apply</h3>
+                <ul>
+                    <li>Currently enrolled AIU student</li>
+                    <li>CGPA 3.50 or above</li>
+                    <li>Grade A or better in the subject you teach</li>
+                    <li>At least 3 hours free each week</li>
+                </ul>
+                <p class="criteria-note">
+                    Applications are reviewed each intake. You will need your
+                    transcript and a short CV.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- =========== STUDENT VOICES =========== -->
+         <!-- =========== SURVEY RESULTS =========== -->
+<!-- REPLACE each __% with your real 17-question survey results. -->
+<section class="survey" id="survey">
+
+    <div class="section-head centered">
+        <p class="eyebrow">From Our Survey</p>
+        <h2>What the Numbers Told Us</h2>
+        <p class="section-sub">
+            Based on our 17-question student survey during the
+            Empathize stage of research.
+        </p>
+    </div>
+
+    <div class="survey-grid">
+
+        <div class="survey-stat">
+            <strong>__%</strong>
+            <p>of students said they'd use a peer tutoring platform</p>
+        </div>
+
+        <div class="survey-stat">
+            <strong>__%</strong>
+            <p>said cost is the main reason they avoid tutoring</p>
+        </div>
+
+        <div class="survey-stat">
+            <strong>__%</strong>
+            <p>said they'd be willing to tutor a subject they're strong in</p>
+        </div>
+
+        <div class="survey-stat">
+            <strong>__%</strong>
+            <p>preferred learning from a fellow student over a stranger tutor</p>
+        </div>
+
+    </div>
+
+</section>
+        <section class="voices">
+
+            <div class="section-head centered">
+                <p class="eyebrow">From Our Students</p>
+                <h2>What the Pilot Told Us</h2>
+            </div>
+
+            <!-- REPLACE with real quotes from your empathy interviews. -->
+            <div class="quote-grid">
+
+                <blockquote>
+                    <p>Quote from a learner you interviewed.</p>
+                    Learner · Programme, Year __
+                </blockquote>
+
+                <blockquote>
+                    <p>Quote from a tutor you interviewed.</p>
+                    Tutor · Programme, Year __
+                </blockquote>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========== CLOSING =========== -->
+        <section class="closing">
+            <h2>Learning Shouldn't Depend on What You Can Pay</h2>
+            <div class="closing-actions">
+                <a class="btn btn-accent" href="#">Create Account</a>
+                <a class="btn btn-ghost" href="#courses">Browse Courses</a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <p class="wordmark-foot">EduBridge</p>
+                <p>Peer tutoring at Albukhary International University.
+                   A student social business.</p>
+            </div>
+
+            <div>
+                <h4>Learn</h4>
+                <ul>
+                    <li><a href="#courses">Course Tracks</a></li>
+                    <li><a href="#categories">All Categories</a></li>
+                    <li><a href="#tutors">Find a Tutor</a></li>
+                    <li><a href="#">Book a Session</a></li>
+                    <li><a href="#">My Sessions</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Teach</h4>
+                <ul>
+                    <li><a href="#teach">Apply to Teach</a></li>
+                    <li><a href="#">Tutor Profile</a></li>
+                    <li><a href="#">Availability</a></li>
+                    <li><a href="#">Payment History</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="pages/login.html">Log In</a></li>
+                    <li><a href="pages/signup.html">Create Account</a></li>
+                    <li><a href="pages/forgot-password.html">Reset Password</a></li>
+                    <li><a href="pages/settings.html">Notification Settings</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <p class="footer-note">
+            ©️ 2026 EduBridge — student project prototype, MPU3412 Social Business 1.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
