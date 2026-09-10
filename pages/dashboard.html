@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Dashboard | EduBridge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <main class="skill-page">
+
+        <a href="#" onclick="logOut(); return false;" class="skill-back">
+            ← Log Out
+        </a>
+
+        <!-- WELCOME BANNER -->
+        <section class="skill-hero">
+            <div>
+                <p class="eyebrow light">My Dashboard</p>
+                <h1 id="welcome-name">Welcome back!</h1>
+                <p id="welcome-role">Loading your account...</p>
+            </div>
+        </section>
+
+
+        <!-- BROWSE & ENROLL -->
+        <section class="categories" style="background:white; padding-left:0; padding-right:0;">
+
+            <div class="section-head">
+                <p class="eyebrow">Browse Courses</p>
+                <h2>Pick a Track to Start Learning</h2>
+            </div>
+
+            <div class="category-grid">
+
+                <article class="category-card">
+                    <span class="cat-num">01</span>
+                    <h3>Computer Science</h3>
+                    <p>Programming, web development, databases, AI &amp; more.</p>
+                    <button class="btn btn-outline" onclick="enroll('Computer Science')">
+                        Enroll
+                    </button>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">02</span>
+                    <h3>Social Media</h3>
+                    <p>Content creation, digital marketing, design &amp; SEO.</p>
+                    <button class="btn btn-outline" onclick="enroll('Social Media')">
+                        Enroll
+                    </button>
+                </article>
+
+                <article class="category-card">
+                    <span class="cat-num">03</span>
+                    <h3>Business (BBA)</h3>
+                    <p>Management, marketing, finance &amp; entrepreneurship.</p>
+                    <button class="btn btn-outline" onclick="enroll('Business (BBA)')">
+                        Enroll
+                    </button>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MY ENROLLED COURSES -->
+        <section class="tutor-availability" style="margin-top:20px;">
+            <h2>My Enrolled Courses</h2>
+            <ul class="availability-list" id="enrolled-list" style="max-width:100%;">
+                <!-- filled in by script below -->
+            </ul>
+            <p id="empty-message" style="color:#52716C; margin-top:10px;">
+                You haven't enrolled in any course yet — pick one above to get started.
+            </p>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <p>©️ 2026 EduBridge — student project prototype.</p>
+    </footer>
+
+
+    <script>
+        // PROTOTYPE ONLY: reads the account and enrollments from this
+        // browser's local storage. A real version would load this data
+        // from a server after the person logs in.
+
+        // Protect this page: if not logged in, send back to login.
+        if (localStorage.getItem('edubridge_loggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+
+        const account = JSON.parse(localStorage.getItem('edubridge_account') || '{}');
+        document.getElementById('welcome-name').textContent = 'Welcome back, ' + (account.name || 'Student') + '!';
+        document.getElementById('welcome-role').textContent = 'Logged in as a ' + (account.role || 'Learner') + '.';
+
+        function getEnrolled() {
+            return JSON.parse(localStorage.getItem('edubridge_enrolled') || '[]');
+        }
+
+        function renderEnrolled() {
+            const enrolled = getEnrolled();
+            const list = document.getElementById('enrolled-list');
+            const emptyMessage = document.getElementById('empty-message');
+            list.innerHTML = '';
+
+            if (enrolled.length === 0) {
+                emptyMessage.style.display = 'block';
+                return;
+            }
+            emptyMessage.style.display = 'none';
+
+            enrolled.forEach(function (course) {
+                const li = document.createElement('li');
+                li.innerHTML = '<span>' + course + '</span><span>Enrolled</span>';
+                list.appendChild(li);
+            });
+        }
+
+        function enroll(course) {
+            const enrolled = getEnrolled();
+            if (!enrolled.includes(course)) {
+                enrolled.push(course);
+                localStorage.setItem('edubridge_enrolled', JSON.stringify(enrolled));
+            }
+            renderEnrolled();
+        }
+
+        function logOut() {
+            localStorage.removeItem('edubridge_loggedIn');
+            window.location.href = '../index.html';
+        }
+
+        renderEnrolled();
+    </script>
+
+</body>
+</html>

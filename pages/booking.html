@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Session | EduBridge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <main class="booking-page">
+
+        <a href="#" onclick="history.back(); return false;" class="skill-back">
+            ← Back
+        </a>
+
+        <div class="booking-card">
+
+            <h1>Book a Session</h1>
+            <p class="booking-with">Booking with: <span id="tutor-name">a tutor</span></p>
+
+            <!-- BOOKING FORM -->
+            <form id="booking-form">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" required placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <select id="time" required>
+                        <option value="">Select a time</option>
+                        <option>9:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>2:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>6:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">What do you need help with?</label>
+                    <textarea id="message" placeholder="e.g. I'm stuck on Python loops for my assignment"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-accent">
+                    Send Booking Request
+                </button>
+
+            </form>
+
+            <!-- CONFIRMATION (hidden until form is submitted) -->
+            <div class="booking-confirm" id="booking-confirm">
+                <h2>Request Sent!</h2>
+                <p>
+                    Your booking request has been sent. The tutor will
+                    confirm the session by email shortly.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <p>©️ 2026 EduBridge — student project prototype.</p>
+    </footer>
+
+
+    <script>
+        // Read the tutor's name from the link that was clicked, e.g.
+        // booking.html?tutor=Alina%20Ahmadi
+        const params = new URLSearchParams(window.location.search);
+        const tutor = params.get('tutor') || 'a tutor';
+        document.getElementById('tutor-name').textContent = tutor;
+
+        // Prototype only: no backend, so we just show a confirmation
+        // message instead of actually sending the form anywhere.
+        document.getElementById('booking-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('booking-form').style.display = 'none';
+            document.getElementById('booking-confirm').classList.add('show');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | EduBridge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <main class="booking-page">
+
+        <a href="../index.html" class="skill-back">
+            ← Back to Home
+        </a>
+
+        <div class="booking-card">
+
+            <h1>Create Account</h1>
+            <p class="booking-with">Join EduBridge as a learner or a tutor</p>
+
+            <form id="signup-form">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" required placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Choose a password">
+                </div>
+
+                <div class="form-group">
+                    <label for="role">I am joining as a</label>
+                    <select id="role" required>
+                        <option value="Learner">Learner</option>
+                        <option value="Tutor">Tutor</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-accent">
+                    Create Account
+                </button>
+
+            </form>
+
+            <p style="margin-top:20px; font-size:14px; color:#52716C; text-align:center;">
+                Already have an account? <a href="login.html" style="color:#073F3D; font-weight:600;">Log in</a>
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <p>©️ 2026 EduBridge — student project prototype.</p>
+    </footer>
+
+
+    <script>
+        // PROTOTYPE ONLY: this saves the account in the browser's local
+        // storage instead of a real database, so it only works on this
+        // computer/browser and is not secure. A real version would need
+        // a server and proper password protection.
+        document.getElementById('signup-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const account = {
+                name: document.getElementById('fullname').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                role: document.getElementById('role').value
+            };
+
+            localStorage.setItem('edubridge_account', JSON.stringify(account));
+            localStorage.setItem('edubridge_loggedIn', 'true');
+
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+
+</body>
+</html>

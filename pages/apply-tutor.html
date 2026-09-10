@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply to Teach | EduBridge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <main class="booking-page">
+
+        <a href="become-tutor.html" class="skill-back">
+            ← Back to Requirements
+        </a>
+
+        <div class="booking-card">
+
+            <h1>Apply to Teach</h1>
+            <p class="booking-with">Tutor application form</p>
+
+            <!-- APPLICATION FORM -->
+            <form id="booking-form">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" required placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="programme">Programme &amp; Year</label>
+                    <input type="text" id="programme" required placeholder="e.g. Computer Science, Year 2">
+                </div>
+
+                <div class="form-group">
+                    <label for="cgpa">Current CGPA</label>
+                    <input type="text" id="cgpa" required placeholder="e.g. 3.4">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">What do you want to teach?</label>
+                    <select id="subject" required>
+                        <option value="">Select a category</option>
+                        <option>Computer Science</option>
+                        <option>Social Media</option>
+                        <option>Business (BBA)</option>
+                        <option>Design &amp; Creative</option>
+                        <option>Languages &amp; Communication</option>
+                        <option>Data &amp; Productivity</option>
+                        <option>Academic &amp; Research</option>
+                        <option>Career &amp; Professional Development</option>
+                        <option>Freelancing &amp; Online Work</option>
+                        <option>Personal Development</option>
+                        <option>Finance &amp; Life Skills</option>
+                        <option>Emerging Technology</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="hours">Hours Free Each Week</label>
+                    <input type="text" id="hours" required placeholder="e.g. 5 hours">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Why do you want to tutor this subject?</label>
+                    <textarea id="message" placeholder="Tell us about your experience with this subject"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-accent">
+                    Submit Application
+                </button>
+
+            </form>
+
+            <!-- CONFIRMATION (hidden until form is submitted) -->
+            <div class="booking-confirm" id="booking-confirm">
+                <h2>Application Sent!</h2>
+                <p>
+                    Thanks for applying. Applications are reviewed once per
+                    intake — we'll email you to schedule a short interview
+                    if you're shortlisted.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <p>©️ 2026 EduBridge — student project prototype.</p>
+    </footer>
+
+
+    <script>
+        // Prototype only: no backend, so we just show a confirmation
+        // message instead of actually sending the form anywhere.
+        document.getElementById('booking-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('booking-form').style.display = 'none';
+            document.getElementById('booking-confirm').classList.add('show');
+        });
+    </script>
+
+</body>
+</html>
